@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {% comment %} To turn into paragraph format: 'as_p' {% endcomment %}
+    {{form}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

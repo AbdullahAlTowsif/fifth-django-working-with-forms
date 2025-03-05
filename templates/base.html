@@ -26,6 +26,10 @@
                 {% url 'submit_form' as sf %}
                 <a class="nav-link" href="{{sf}}">Form</a>
               </li>
+              <li class="nav-item">
+                {% url 'django_form' as df %}
+                <a class="nav-link" href="{{df}}">Django Form</a>
+              </li>
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
