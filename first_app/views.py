@@ -9,9 +9,10 @@ def about(request):
     if request.method == 'POST':
         name = request.POST.get('username')
         email = request.POST.get('email')
-        return render(request, './first_app/about.html', {'name': name, 'email': email})
+        select = request.POST.get('select')
+        return render(request, './first_app/about.html', {'name': name, 'email': email, 'select': select})
     else:
-        return render(request, './first_app/about.html', {'name': name, 'email': email})
+        return render(request, './first_app/about.html')
     # return render(request, './first_app/about.html')
 
 def submit_form(request):
